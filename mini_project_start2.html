@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style>
+            .header{
+                width:100%;
+                height: 75px;
+                display: flex;
+                position: relative;
+                top:0;
+                background-color: antiquewhite;
+                font-size: 16px;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+            }
+            .sidebar{
+                width:15%;
+                height: 100%;
+                background-color:pink;
+                align-items:center;
+                font-size: 15px;
+                justify-content: center;
+                display: flex;
+                position: fixed;
+                direction: row;
+                left: 0;
+                top: 75px;
+
+            }
+            .content{
+                width: 85%;
+                background-color: blue;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 15%;
+                position: fixed;
+            }
+            .footer{
+                width: 85%;
+                background-color: green;
+                height: 15%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 15%;
+                position: fixed;
+                bottom: 0%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">Header</div>
+        <div class="block2">
+        <div class="sidebar">sidebar</div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+        </div>
+    </body>
+</html>
