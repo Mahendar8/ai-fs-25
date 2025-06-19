@@ -1,61 +1,61 @@
-<<html>
+<html>
   <head>
     <style>
-     .header{
-                width: 100%;
-                height: 75px;
-                background-color: bisque;
-                position: fixed;
-                top: 0px;
-                font-size: 16px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                z-index: 1;
-            }
-            .sidebar{
-                width: 25%;
-                height: 100%;
-                background-color: gray;
-                top: 75px;
-                font-size: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: fixed;
-                direction: row;
-                left: 9;
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-            }
-            .content{
-            width: 75%;
-            height: 100%;
-            background-color: plum;
-            top: 0px;
-            font-size: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 25%;
-            }
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 75px;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+      }
 
-            .footer{
-                width: 100%;
-                height: 10%;
-                background-color: yellowgreen;
-                top: 0px;
-                font-size: 16px;
-                display: flex;
-                justify-content: center;
-                align-items: center;                
-            }
-            aside{
-                display: flex;
-                flex-direction: column;
-                gap: 70px;
+      .header-content {
+        font-size: 16px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px; /* space between header items */
+      }
 
-            }
+      .block2 {
+        display: flex;
+        margin-top: 75px; /* to avoid overlap with fixed header */
+        height: calc(100vh - 75px);
+        background-color: bisque;
+      }
+
+      aside {
+        flex: 0 0 100px;
+        background-color: aqua;
+      }
+
+      .block3 {
+        flex: 1;
+        background-color: red;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      footer {
+        width: 100%;
+        height: 50px;
+        background-color: blue;
+      }
     </style>
   </head>
   <body>
@@ -67,20 +67,15 @@
       </div>
     </header>
 
-    <div class="sidebar">
+    <div class="block2">
       <aside>
-
-<div>
-    student form 
-</div>
-<div> student registration </div>
-
+        <div>Student Form</div>
+        <div>Student Report</div>
       </aside>
 
-
-      <main class="content">
+      <main class="block3">
         <section class="content">Content</section>
-        <footer class="footer">Footer</footer>
+        <footer>Footer</footer>
       </main>
     </div>
   </body>
